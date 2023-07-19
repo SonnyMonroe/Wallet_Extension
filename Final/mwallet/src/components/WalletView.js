@@ -218,7 +218,7 @@ function WalletView({
     });
 
     const response = res.data;
-
+    console.log(response);
     if (response.tokens.length > 0) {
       setTokens(response.tokens);
     }
@@ -240,14 +240,15 @@ function WalletView({
     setBalance(0);
     navigate("/");
   }
-
+  //Line 245 - 259 is where I think I am having trouble having the tokens display in the wallet. It should automatically display all the ERC20 tokens the user has, an icon of the tokens and the token balances 7/19/23
+  //Specifically, I think the issues are in the Arrays for the useEffect hooks where I put the esLint cpmments
   useEffect(() => {
     if (!wallet || !selectedChain) return;
     setNfts(null);
     setTokens(null);
     setBalance(0);
     getAccountTokens();
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (!wallet) return;
@@ -255,7 +256,7 @@ function WalletView({
     setTokens(null);
     setBalance(0);
     getAccountTokens();
-  }, [selectedChain]);
+  }, [selectedChain]); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <>
