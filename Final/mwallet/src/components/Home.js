@@ -11,7 +11,7 @@ function Home() {
       <div className="content">
         <img src={mwallet} alt="logo" className="frontPageLogo" />
         <h2> Hey There 👋 </h2>
-        <h4 className="h4"> Welcome to your Crypto Wallet</h4>
+        <h4 className="h4"> Welcome to your First Crypto Wallet!</h4>
         <Button
           onClick={() => navigate("/yourwallet")}
           className="frontPageButton"

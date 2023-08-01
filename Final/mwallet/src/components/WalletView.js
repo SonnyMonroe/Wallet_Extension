@@ -33,6 +33,34 @@ function WalletView({
   const [processing, setProcessing] = useState(false);
   const [hash, setHash] = useState(null);
 
+  //Below will Render the Tokens
+  // const tokens = [
+  //   {
+  //     symbol: "ETH",
+  //     name: "Ethereum",
+  //     balance: 100000000000,
+  //     decimals: 18,
+  //   },
+  //   {
+  //     symbol: "LINK",
+  //     name: "Chainlink",
+  //     balance: 100000000000,
+  //     decimals: 18,
+  //   },
+  //   {
+  //     symbol: "UNI",
+  //     name: "Uniswap",
+  //     balance: 100000000000,
+  //     decimals: 18,
+  //   },
+  //   {
+  //     symbol: "MATIC",
+  //     name: "Polygon",
+  //     balance: 100000000000,
+  //     decimals: 18,
+  //   },
+  // ];
+
   const items = [
     {
       key: "3",
